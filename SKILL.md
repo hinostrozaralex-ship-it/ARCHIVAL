@@ -1,26 +1,28 @@
 ---
 name: archival-v8
-description: Analiza, sintetiza y consolida hilos de chat en NotebookLM al invocar //archival. Incluye trazabilidad temporal (created_at/updated_at), frontmatter YAML listo para Obsidian, politica estricta de emojis y brevedad en titulos, modo delta sin perdida de informacion, detector de saturacion y extraccion de acciones y wikilinks.
+description: Analiza, sintetiza y consolida hilos de chat en NotebookLM al invocar //archival. Conserva explicaciones conceptuales profundas, trazabilidad temporal (created_at/updated_at), frontmatter YAML listo para Obsidian, politica estricta de emojis y brevedad en titulos, modo delta sin perdida de informacion, detector de saturacion y extraccion de acciones y wikilinks.
 ---
 
 # Archival v8: Organizador y Consolidador de Conocimiento (NotebookLM + Obsidian Ready)
 
-Skill diseñada para procesar conversaciones, sintetizar conocimientos clave con compacidad sustantiva y consolidar notas continuas dentro de NotebookLM bajo aislamiento `_archi`, generando documentos Markdown estructurados con metadatos YAML compatibles con sincronizacion hacia Obsidian (`CORTEX`).
+Skill diseñada para procesar conversaciones, estructurar explicaciones conceptuales y detalles tecnicos sin recortar profundidad educativa, y consolidar notas continuas dentro de NotebookLM bajo aislamiento `_archi`, generando documentos Markdown con metadatos YAML compatibles con sincronizacion hacia Obsidian.
 
 ## Disparador Principal
 
 - Comando explicito: `//archival`
 - Peticiones del usuario para archivar, resumir o consolidar la conversacion actual en NotebookLM.
 
-## Criterio de Sintesis y Nivel de Detalle (Compacidad Sustantiva)
+## Criterio de Sintesis y Nivel de Detalle (Profundidad Conceptual + Rigor Tecnico)
 
-La sintesis NO debe ser un resumen telegrafico que mutile el contexto practico ni una transcripcion literal redundante:
+El objetivo NO es recortar las explicaciones ni reducir el chat a una lista telegrafica. La nota debe funcionar como un **documento de estudio y referencia completo** que conserve tanto la teoria como la practica:
 
-1. **Retener Detalles Tecnicos y Contextuales:** Conservar comandos exactos, rutas, nombres de archivos, errores resueltos y configuraciones clave tratadas en el chat.
-2. **Preservar Ejemplos y Fragmentos Representativos:** Si en el chat se explico un concepto mediante codigo, una analogia crucial o un caso practico, el ejemplo DEBE incluirse en la nota.
-3. **Modo Delta / Cero Perdida al Fusionar:** Al actualizar una nota existente (`refresh_source_content`), NUNCA reescribir ni resumir destructivamente el contenido previo. Conservar integro el cuerpo anterior e integrar unicamente los bloques nuevos en su seccion correspondiente o bajo un bloque `### Actualizacion [YYYY-MM-DD HH:mm]`.
-4. **Detector de Umbral de Saturacion (Split Inteligente):** Si una nota existente supera las ~2.500 palabras o acumula mas de 5 fusiones, advertir antes de fusionar y proponer dividirla en dos notas mas especificas dentro del mismo cuaderno.
-5. **Extraccion de Acciones y Conceptos Relacionados:**
+1. **Conservar Explicaciones Conceptuales y Razonamiento:** Mantener intactas las explicaciones del *por que* y el *como* funciona cada concepto, arquitectura, mecanismo o decision expuesta en el chat. No comprimir parrafos explicativos en frases sueltas cuando el desarrollo aporta claridad o contexto de aprendizaje.
+2. **Retener Detalles Tecnicos y Contextuales:** Conservar comandos exactos, rutas, nombres de archivos, errores resueltos y configuraciones clave tratadas en el chat.
+3. **Preservar Ejemplos, Analogias y Fragmentos Representativos:** Si en el chat se explico un concepto mediante codigo, una analogia crucial o un caso practico, incluirlo completo en la nota.
+4. **Filtrado Exclusivo de Ruido Conversacional:** Eliminar unicamente saludos, confirmaciones breves (`1`, `si`, `vale`), repeticiones entre turnos y callejones sin salida ya descartados, conservando toda la sustancia explicativa del hilo.
+5. **Modo Delta / Cero Perdida al Fusionar:** Al actualizar una nota existente (`refresh_source_content`), NUNCA reescribir ni resumir destructivamente el contenido previo. Conservar integro el cuerpo anterior e integrar unicamente los bloques nuevos en su seccion correspondiente o bajo un bloque `### Actualizacion [YYYY-MM-DD HH:mm]`.
+6. **Detector de Umbral de Saturacion (Split Inteligente):** Si una nota existente supera las ~3.500 palabras o acumula mas de 5 fusiones, advertir antes de fusionar y proponer dividirla en dos notas mas especificas dentro del mismo cuaderno.
+7. **Extraccion de Acciones y Conceptos Relacionados:**
    - Si quedaron tareas pendientes o comandos por ejecutar, extraerlos en `## Proximos pasos` usando checkboxes (`- [ ]`).
    - Incluir al final una seccion `## Conceptos relacionados` con enlaces cruzados en formato `[[Nombre de Nota]]` para alimentar el grafo de Obsidian.
 
@@ -53,7 +55,7 @@ tags: [archival, tema1, tema2]
 
 # [Titulo limpio]
 
-[Cuerpo estructurado con compacidad sustantiva]
+[Desarrollo completo con explicaciones conceptuales, ejemplos, comandos y configuraciones]
 
 ## Proximos pasos
 - [ ] [Accion o tarea pendiente si aplica]

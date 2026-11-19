@@ -1,16 +1,17 @@
 # Archival (v8) ⚡
 
-Agente y skill personalizada para organizar, sintetizar y consolidar flujos de trabajo técnicos y conversaciones en **NotebookLM** de forma estructurada, limpia y sin pérdida de contexto crítico, generando documentos Markdown con Frontmatter YAML listos para sincronizarse con bóvedas locales de **Obsidian**.
+Agente y skill personalizada para organizar, estructurar y consolidar conversaciones técnicas y de estudio en **NotebookLM** sin perder profundidad conceptual ni contexto práctico, generando documentos Markdown con Frontmatter YAML listos para sincronizarse con bóvedas locales de **Obsidian**.
 
 ---
 
-## Novedades en v8 (Trazabilidad y Obsidian Ready)
+## Novedades en v8 (Profundidad Conceptual y Obsidian Ready)
 
+- **Preservación conceptual profunda (cero recortes educativos):** Supera el formato de resumen telegráfico. Conserva íntegras las explicaciones del *por qué* y el *cómo* de cada concepto, arquitectura o decisión expuesta en el hilo, filtrando únicamente el ruido conversacional.
 - **Trazabilidad temporal inmutable:** Cada documento registra automáticamente `created_at` (fijo desde su creación) y `updated_at` (actualizado en cada fusión), junto con un pie de historial legible.
 - **Modo Delta (cero pérdida de información):** Al actualizar una fuente existente (`refresh_source_content`), conserva íntegro el contenido previo e integra únicamente los bloques nuevos sin resumir destructivamente.
-- **Detector de umbral de saturación (Split inteligente):** Alerta cuando una nota supera ~2.500 palabras o acumula más de 5 fusiones y propone dividirla en dos subtemas específicos dentro del mismo cuaderno.
+- **Detector de umbral de saturación (Split inteligente):** Alerta cuando una nota supera ~3.500 palabras o acumula más de 5 fusiones y propone dividirla en dos subtemas específicos dentro del mismo cuaderno.
 - **Extracción de acciones y enlaces cruzados:** Genera automáticamente bloques `## Próximos pasos` con tareas verificables (`- [ ]`) y secciones `## Conceptos relacionados` con enlaces `[[wikilinks]]` para alimentar el grafo de conocimiento en Obsidian.
-- **Frontmatter YAML nativo:** Estructura metadatos (`title`, `created_at`, `updated_at`, `notebook`, `tags`) directamente en el encabezado del documento para facilitar la sincronización unidireccional hacia bóvedas locales mediante clientes MCP compatibles.
+- **Frontmatter YAML nativo:** Estructura metadatos (`title`, `created_at`, `updated_at`, `notebook`, `tags`) directamente en el encabezado del documento para facilitar la sincronización unidireccional hacia bóvedas locales mediante clientes MCP o CLI compatibles.
 
 ---
 
@@ -30,10 +31,10 @@ Para garantizar orden, compatibilidad entre sistemas de archivos y aislamiento d
 
 ---
 
-## Criterio de Síntesis (Compacidad Sustantiva)
+## Criterio de Síntesis (Profundidad Conceptual + Rigor Técnico)
 
-- **Equilibrio de síntesis:** Supera los resúmenes telegráficos ultracompactos. Mantiene un formato conciso pero conserva comandos de terminal, configuraciones, rutas de archivos y el desglose de fallos resueltos.
-- **Preservación obligatoria de ejemplos:** Snippets de código clave, bloques de comandos y casos prácticos explicados en la conversación se guardan íntegros dentro de la nota.
+- **Documento de estudio completo:** Mantiene intactos los párrafos explicativos, razonamientos teóricos y comparativas enriquecedoras del hilo, eliminando solo saludos, confirmaciones breves y repeticiones innecesarias.
+- **Rigor técnico y ejemplos íntegros:** Comandos de terminal, configuraciones, rutas de archivos, snippets de código, analogías clave y desglose de fallos resueltos se conservan completos dentro de la nota.
 - **Telemetría limpia en texto plano:** Eliminación total de cajas de código superfluas y barras ASCII para una integración visual directa.
 - **Aprobación de mínima fricción:** Confirmación inmediata respondiendo únicamente `1` o `sí`.
 
@@ -44,26 +45,24 @@ Para garantizar orden, compatibilidad entre sistemas de archivos y aislamiento d
 ```markdown
 ---
 title: Sync NotebookLM Obsidian
-created_at: 2026-11-19 14:15
-updated_at: 2026-11-19 14:15
+created_at: 2026-11-19 17:03
+updated_at: 2026-11-19 17:03
 notebook: 🧠 AGENTES_IA_archi
 tags: [archival, obsidian, mcp, markdown]
 ---
 
 # Sync NotebookLM Obsidian
 
-[Cuerpo estructurado con compacidad sustantiva, comandos y ejemplos]
+[Desarrollo completo con explicaciones conceptuales, ejemplos, comandos y configuraciones]
 
 ## Próximos pasos
-- [ ] Configurar servidor MCP de NotebookLM en el entorno local.
+- [ ] Configurar cliente de sincronización de NotebookLM en el entorno local.
 
 ## Conceptos relacionados
 - [[Arquitectura MCP]]
 - [[Gestion del Conocimiento]]
 
-> Historial: Creado el 2026-11-19 14:15 | Última actualización: 2026-11-19 14:15
-
-## Uso Rápido
+> Historial: Creado el 2026-11-19 17:03 | Última actualización: 2026-11-19 17:03
 
 1. En cualquier conversación o resolución técnica que quieras archivar, escribe:
    ```text
